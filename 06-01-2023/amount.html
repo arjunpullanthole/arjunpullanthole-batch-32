@@ -3,11 +3,12 @@
         <style>
             body{
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                text-align: center;
+                background-color: grey;
             }
             button{
-                background-color: #ffa500;
+                background-color: rgb(80, 75, 75);
                 border: none;
+                border-radius: 20%;
                 color: white;
                 padding: 15px 32px;
                 text-align: center;
@@ -18,14 +19,32 @@
                 cursor: pointer;
             }
             button:hover{
-                background-color: #f54008;
+                background-color: rgb(30, 30, 30);
             }
-
+            table{
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                color: white;
+                text-shadow: 2px 2px 4px #000000;
+            }
+            td,tr,th{
+                border-bottom: 1px solid #ddd;
+                border-radius: 10%;
+                padding: 15px;    
+            }
+            input{
+                text-align: center;
+            }
         </style>
         <script>
             var temp,sendAmount,amount;
             function calculate(temp)
             {
+                if (typeof(amount)!="number")
+                {
+                    amount = +amount;   //not needed
+                }
                 switch (temp){
                     case "dev":
                         sendAmount = amount*1.10;
@@ -66,13 +85,21 @@
         </script>
     </head>
     <body>
-        <button onclick= "dev()" >Dev</button>
-        <button onclick="test()" >Test</button>
-        <button onclick="stage()" >Stage</button>
-        <button onclick ="prod()">Prod</button>
-        <br>
-        <label for="amountß">Enter the amount:</label>
-        <input type="text" id="amount" name="amount"><br>
-        <p>Sent Amount : </p><p id = "sent"></p>
+        <table >
+            <tr>
+                <td><button onclick= "dev()" >Dev</button></td>
+                <td><button onclick="test()" >Test</button></td>
+                <td><button onclick="stage()" >Stage</button></td>
+                <td><button onclick ="prod()">Prod</button></td>
+            </tr>
+            <tr>
+                <td colspan="2">Enter the amount:</td>
+                <td colspan="2"> <input type="number" id="amount" name="amount"></td>
+            </tr>
+            <tr>
+                <td colspan="2" >Amount sent:</td>
+                <td colspan="2" id = "sent" ></td>
+            </tr>
+        </table>
     </body>
 </html>
