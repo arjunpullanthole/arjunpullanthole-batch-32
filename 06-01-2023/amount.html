@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <style>
+            body{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                text-align: center;
+            }
+            button{
+                background-color: #ffa500;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: #f54008;
+            }
+
+        </style>
+        <script>
+            var temp,sendAmount,amount;
+            function calculate(temp)
+            {
+                switch (temp){
+                    case "dev":
+                        sendAmount = amount*1.10;
+                        break;
+                    case "test":
+                        sendAmount = amount*1.20;
+                        break;
+                    case "stage":
+                        sendAmount = amount*1.30;
+                        break;
+                    case "prod":
+                        sendAmount = amount*1.05;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            function dev(){
+                amount = document.getElementById('amount').value;
+                calculate("dev");
+                document.getElementById('sent').innerHTML = sendAmount;
+            }
+            function test(){
+                amount = document.getElementById('amount').value;
+                calculate("test");
+                document.getElementById('sent').innerHTML = sendAmount;
+            }
+            function stage(){
+                amount = document.getElementById('amount').value;
+                calculate("stage");
+                document.getElementById('sent').innerHTML = sendAmount;
+            }
+            function prod(){
+                amount = document.getElementById('amount').value;
+                calculate("prod");
+                document.getElementById('sent').innerHTML = sendAmount;
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick= "dev()" >Dev</button>
+        <button onclick="test()" >Test</button>
+        <button onclick="stage()" >Stage</button>
+        <button onclick ="prod()">Prod</button>
+        <br>
+        <label for="amountß">Enter the amount:</label>
+        <input type="text" id="amount" name="amount"><br>
+        <p>Sent Amount : </p><p id = "sent"></p>
+    </body>
+</html>
