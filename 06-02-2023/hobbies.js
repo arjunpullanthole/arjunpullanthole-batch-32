@@ -26,10 +26,3 @@ function remove()
     updatePage();
 }
 
-var alloc = {
-    hobby: ["hello","value"],
-    name: "Arjun",
-    class: "12"
-}
-
-console.log(Object.entries(alloc)[0][1]);
