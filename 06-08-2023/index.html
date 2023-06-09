@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+
+            class List{
+                constructor(arr){
+                    this.arr = arr;
+                }}
+
+            List.prototype.custom_sort = function(){
+                this.arr.sort((a,b)=> a-b);
+                return this.arr[1];
+            }
+
+            let lst = new List([67,78,5,8,90,12]);
+            console.log(lst.custom_sort());
+
+        </script>
+    </body>
+</html>
