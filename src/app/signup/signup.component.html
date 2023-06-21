@@ -4,30 +4,30 @@
         <table>
             <tr>
                 <td><label for="fname">First Name</label></td>
-                <td><input type="text" id="fname" placeholder="First name"/></td>
+                <td><input type="text" name="fname" [(ngModel)] = "profile.Firstname" placeholder="First name"/></td>
             </tr>
             <tr>
                 <td><label for="lname">Last Name</label></td>
-                <td><input type="text" id="lname" placeholder="Last name"/></td>
+                <td><input type="text" name="lname" [(ngModel)] = "profile.Lastname" placeholder="Last name"/></td>
             </tr>
             <tr>
                 <td><label for="email">E-mail</label></td>
-                <td><input type="email" id="email" placeholder="xyz@mail.com"/></td>
+                <td><input type="email" name="email" [(ngModel)] = "profile.email" placeholder="xyz@mail.com"/></td>
             </tr>
             <tr>
                 <td><label for="password">Password</label></td>
-                <td><input type="password" id="password" placeholder="**********"/></td>
+                <td><input type="password" name="password" [(ngModel)] = "profile.Password" placeholder="**********"/></td>
             </tr>
             <tr>
                 <td><label for="phone">Phone Number</label></td>
-                <td><input type="tel" id="phone" placeholder="123-45-678" /></td>
+                <td><input type="tel" name="phone" [(ngModel)] = "profile.phone" placeholder="123-45-678" /></td>
             </tr>
             <tr>
                 <td><label for="dob">Date of Birth</label></td>
-                <td><input type="date" id="dob"/></td>
+                <td><input type="date" name="dob" [(ngModel)] ="profile.dob"/></td>
             </tr>
             <tr>
-                <td><input type="submit" value="Submit" class="clickable"></td>
+                <td><input type="submit" (click)="get_val()" class="clickable" [routerLink]="['../login']"></td>
                 <td><input type="reset" class="clickable"></td>
             </tr>
         </table>

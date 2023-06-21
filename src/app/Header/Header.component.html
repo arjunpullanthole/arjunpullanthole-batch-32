@@ -1,7 +1,8 @@
 <div class="header">
-  <a href="#">Profile</a>
-  <a href="#">Contact</a>
-  <a href="#" (click)="login()">{{disp}}</a>
+  <a routerLink= "profile" (click)="send('Profile')">Profile</a>
+  <a (click)="send('Contact')">Contact</a>
+  <a routerLink= "login" (click)="login()" (click)="send('Login')">{{disp}}</a>
+  <a>{{random}}</a>
   <div class="search-container">
     <form>
       <input type="text" placeholder="Search.." name="search">

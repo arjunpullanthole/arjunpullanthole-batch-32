@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StorageService } from "../storage.service";
 
 @Component({
   selector: 'app-profile',
@@ -6,12 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-  profile = {
-    firstname: "Arjun",
-    Lastname: "Pullanthole",
-    email : "arjunpullanthole@gmail.com",
-    phone : "480-389-5677",
-    dob: "12-28-1995"
+  constructor(private storageservice:StorageService) { }
+  profile: any = {};
+  ngOnInit() 
+  {
+    this.profile = this.storageservice.getScope();
   }
-
 }

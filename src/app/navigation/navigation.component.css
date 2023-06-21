@@ -1,12 +1,11 @@
+div{
+    background-color: rgb(206, 201, 201);
+    width: 15%;
+}
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 15%;
-    background-color: rgb(206, 201, 201);
-    position: fixed;
-    height: 100%;
-    overflow: auto;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 

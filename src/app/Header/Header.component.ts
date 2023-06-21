@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-Header',
@@ -16,5 +16,11 @@ export class HeaderComponent implements OnInit {
     this.clicked = !this.clicked;
     this.disp = this.clicked? "Logout" : "Login";
   }
+  @Output() sentContact = new EventEmitter();
+  @Input() random = "random";
 
+  send(val:string)
+  {
+    this.sentContact.emit(val);
+  }
 }

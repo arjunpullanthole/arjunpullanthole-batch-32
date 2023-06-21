@@ -1,25 +1,9 @@
 <div>
     <h1>Display Profile</h1>
     <table>
-        <tr>
-            <td><label>First Name</label></td>
-            <td>{{profile.firstname}}</td>
-        </tr>
-        <tr>
-            <td><label>Last Name</label></td>
-            <td>{{profile.Lastname}}</td>
-        </tr>
-        <tr>
-            <td><label>E-mail</label></td>
-            <td>{{profile.email}}</td>
-        </tr>
-        <tr>
-            <td><label>Phone Number</label></td>
-            <td>{{profile.phone}}</td>
-        </tr>
-        <tr>
-            <td><label>Date of Birth</label></td>
-            <td>{{profile.dob}}</td>
+        <tr *ngFor= "let item of profile | keyvalue">
+            <td><label>{{item.key}}</label></td>
+            <td>{{item.value}}</td>
         </tr>
     </table>
 </div>

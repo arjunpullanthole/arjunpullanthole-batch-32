@@ -1,7 +1,8 @@
 <div class="container">
-    <!-- <app-Header></app-Header>
-    <app-navigation></app-navigation> -->
-    <app-login></app-login>
+    <app-Header (sentContact)="log($event)" [random]="random"></app-Header>
+    <app-navigation></app-navigation>
+    <div><router-outlet></router-outlet></div>
+    <!-- <app-login></app-login>
     <app-signup></app-signup>
-    <app-profile></app-profile>
+    <app-profile></app-profile> -->
 </div>
