@@ -14,12 +14,12 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [	
     AppComponent,
-      HeaderComponent,
-      ContainerComponent,
-      NavigationComponent,
-      SignupComponent,
-      ProfileComponent,
-      LoginComponent
+    HeaderComponent,
+    ContainerComponent,
+    NavigationComponent,
+    SignupComponent,
+    ProfileComponent,
+    LoginComponent
    ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@ import { StorageService } from "../storage.service";
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent {
+export class ProfileComponent{
   constructor(private storageservice:StorageService) { }
   profile: any = {};
   ngOnInit() 

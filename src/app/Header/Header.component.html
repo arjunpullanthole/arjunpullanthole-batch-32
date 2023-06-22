@@ -1,8 +1,8 @@
 <div class="header">
-  <a routerLink= "profile" (click)="send('Profile')">Profile</a>
-  <a (click)="send('Contact')">Contact</a>
-  <a routerLink= "login" (click)="login()" (click)="send('Login')">{{disp}}</a>
-  <a>{{random}}</a>
+  <a [routerLink]= "'/profile'">Profile</a>
+  <a [routerLink]= "'/signup'">Signup</a>
+  <a (click)="login()">{{auth}}</a>
+  <p *ngIf="this.storageservice.auth.value">Hello {{this.storageservice.getScope().Firstname}}</p>
   <div class="search-container">
     <form>
       <input type="text" placeholder="Search.." name="search">

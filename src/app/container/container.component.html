@@ -1,8 +1,5 @@
 <div class="container">
-    <app-Header (sentContact)="log($event)" [random]="random"></app-Header>
+    <app-Header></app-Header>
     <app-navigation></app-navigation>
-    <div><router-outlet></router-outlet></div>
-    <!-- <app-login></app-login>
-    <app-signup></app-signup>
-    <app-profile></app-profile> -->
+    <router-outlet></router-outlet>
 </div>

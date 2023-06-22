@@ -16,7 +16,7 @@ export class SignupComponent {
     phone : "",
     dob: ""
   }
-  get_val()
+  submit()
   {
     alert("Successfully created an account for "+this.profile.Firstname);
     this.storageservice.setScope(this.profile);
