@@ -7,7 +7,10 @@ export const deactGuard: CanDeactivateFn<ProfileComponent> = (component, current
   const storage = inject(StorageService);
   if(storage.getAuth())
     {
-      alert("Warning: changes will be lost");
+      if(confirm("Warning: changes will be lost")==true)
+        return true;
+      else
+        return false;
     }
   return true;
 };

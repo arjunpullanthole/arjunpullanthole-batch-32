@@ -15,7 +15,10 @@ export class AuthService implements CanActivate,CanDeactivate<ProfileComponent>{
   canDeactivate(){
     if(this.storage.auth)
     {
-      alert("Warning: changes will be lost");
+      if(confirm("Warning: changes will be lost")==true)
+        return true;
+      else
+        return false;
     }
     return true;
   }
